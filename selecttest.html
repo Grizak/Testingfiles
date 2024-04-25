@@ -1,6 +1,17 @@
-<select name="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+<select id="navigation">
+  <option value="">Select an option</option>
+  <option value="https://example.com">Option 1</option>
+  <option value="https://example.org">Option 2</option>
+  <option value="https://example.net">Option 3</option>
 </select>
+
+<script>
+document.getElementById("navigation").addEventListener("change", function() {
+  var selectedOption = this.value;
+  if (selectedOption) {
+    window.location.href = selectedOption; // Navigate to the selected URL
+    // Alternatively, you can call a JavaScript function based on the selected option:
+    // handleOption(selectedOption);
+  }
+});
+</script>
